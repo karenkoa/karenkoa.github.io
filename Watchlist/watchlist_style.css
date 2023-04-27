@@ -1,37 +1,37 @@
 .header{
     background-color: #151722;
-    height: 86px;
+    height: 82px;
     filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.3));
     display: flex;
     justify-content: flex-start;
     align-items: initial;
-
 }
                                    /**************Menu****************/
-
-
-.head-button{
-    color: #faf8fc;
-    font-family: avenir;
+.head-bttn{
+    color:#FAF8FC;
+    font-family: Montserrat;
     font-weight: bold;
     background: none;
+    border: none;
     font-size: 12px;
     letter-spacing: 1.42px;
-    border: none;
-    margin: 16px 32px 16px 32px;
+    margin: 15px 30px 15px 30px;
     cursor: pointer;
     display: flex;
     align-items: center;
     flex-direction: row;
 }
 
-.head-button:hover{
+.head-bttn:hover{
     text-decoration: underline;
 }
 
-.icon{
+#icon{
     margin-right: 16px;
+}
 
+a{
+    color:#FFFFFF;
 }
 
 .profile{                               /*Contenedor del perfil*/
@@ -39,7 +39,7 @@
     justify-content: center;
     align-items: center;
     margin: auto;
-    font-family: avenir;
+    font-family: Montserrat;
     font-size: 15px;
 }
 
@@ -52,7 +52,7 @@
     border: none;
     margin-left: 10em;
     color: #FFFFFF;
-    font-family: avenir;
+    font-family: Montserrat;
     font-size: 14px;
     background-color: #151722;
     
@@ -64,7 +64,7 @@
     border: none;
     background-color: #0E0F15;
     color: #D9D9D9;    
-    font-family: avenir;
+    font-family: Montserrat;
     font-size: 12px;
 }
 
@@ -76,7 +76,7 @@
 
 .title{                                     /*Nombre de la página*/
     color: #f9f9f9;
-    font-family: avenir;
+    font-family: Montserrat;
     font-weight: bold;
     padding-left: 114px;
     font-size: 44px;
@@ -91,8 +91,8 @@
 
 .subtitle{
     color: #f9f9f9;
-    font-family: avenir;
-    font-weight: bold;
+    font-family: Montserrat;
+    font-weight: 400px;
     padding-left: 114px;
     font-size: 20px;
     letter-spacing: .11px;
@@ -109,7 +109,7 @@ body{
     padding: 0rem;
     margin: 0rem;
     background-color: #1a1d29;
-    font-family: avenir;
+    font-family: Montserrat;
     padding: 0em;
     margin: 0em;
 }
@@ -136,6 +136,7 @@ body{
     border-radius: 4px;
     margin: 10px;
     cursor: pointer;
+    border-radius: 9.5px;
 }
 
 #miley{
@@ -156,15 +157,16 @@ body{
     border-radius: 4px;
 }
 
-.footer{
+footer{
    background-color:#151722;
    height: 278px;
    width: auto;
    font-weight: 300;
    display: flex;
+   justify-content: center;
    align-items: center;
    padding: 1.5em 5em 1em 1.5em;
-   font-family: avenir;
+   font-family: Montserrat;
    color:#cacaca;
    flex-direction: column;
 }

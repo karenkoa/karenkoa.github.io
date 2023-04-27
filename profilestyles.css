@@ -69,6 +69,11 @@ h4{                                                     /*Texto "Who's watching?
     cursor: pointer;
 }
 
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 img{                                                    /*Estilo de las imágenes de perfil.*/
     border-radius: 50%;
     border: 2px solid #1A1D29;
