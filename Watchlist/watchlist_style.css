@@ -1,13 +1,25 @@
-.header{
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    min-height: 82px;
     background-color: #151722;
-    height: 82px;
     filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.3));
+}
+
+.menu{
+    width: 80%;
     display: flex;
     justify-content: flex-start;
     align-items: initial;
+    margin: 0;
 }
-                                   /**************Menu****************/
-.head-bttn{
+
+nav button {
     color:#FAF8FC;
     font-family: Montserrat;
     font-weight: bold;
@@ -22,56 +34,91 @@
     flex-direction: row;
 }
 
-.head-bttn:hover{
+nav button:hover{
     text-decoration: underline;
 }
 
 #icon{
-    margin-right: 16px;
+    margin-right: 10px;
 }
 
 a{
     color:#FFFFFF;
+    text-decoration: none;
 }
 
-.profile{                               /*Contenedor del perfil*/
+.profile{
+    width: 20%;
+    min-width:150px;
+    padding: 0;
+    width: 20%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    font-family: Montserrat;
-    font-size: 15px;
+    flex-direction: row-reverse;
+    margin: 15px 50px;
 }
 
-.accordion{                             /*Botón acordeón del perfil*/
-    cursor: pointer;
-    transition: 0.5s;
+
+ul, li{
+    list-style: none;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    padding: 0;
+   
+}
+
+.profile li a{
+    background-color:#151722;
+    color: #FAF8FC;
+    min-width: 150px;
+    text-decoration: none;
+    padding: 18px 10px;
+    display: block;
+}
+
+.profile li a:hover{
+    background-color: #0E0F15;
+}
+
+.profile li ul{
+    display: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.profile li:hover > ul{
+    display: hidden;
+}
+
+.profile button{
     border: none;
-    margin-left: 10em;
-    color: #FFFFFF;
+    background: none;
+    color:#FAF8FC;
+    padding: 0;
     font-family: Montserrat;
-    font-size: 14px;
-    background-color: #151722;
+    text-align: justify;
+    font-weight: 600;
+}
+
+
+.accordion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     
 }
 
-.panel{                                     /*Panel de opciones oculto*/
-    display: none;
-    overflow: hidden;
-    border: none;
-    background-color: #0E0F15;
-    color: #D9D9D9;    
-    font-family: Montserrat;
-    font-size: 12px;
+.accordion ul li #pic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
 }
 
 #pic{                                       /*Foto de perfil*/
-    margin-left: 16px;
+    margin-left: 10px;
     height: 40px;
     width: 40px;
+    float: right;
 }
 
 .title{                                     /*Nombre de la página*/
@@ -157,27 +204,27 @@ body{
     border-radius: 4px;
 }
 
+/*********************************************************************************************************************************/
 footer{
-   background-color:#151722;
-   height: 278px;
-   width: auto;
-   font-weight: 300;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   padding: 1.5em 5em 1em 1.5em;
-   font-family: Montserrat;
-   color:#cacaca;
-   flex-direction: column;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #151722;
+    color: #FFFFFF;
+    height: 278px;
+    width: auto;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5em 5em 1.5em 1.5em;
 }
-
-
 
 a{
-    color: #cacaca;
+    color: #FFFFFF;
 }
-
-
 
 .user{
     list-style: none;
@@ -186,26 +233,14 @@ a{
     justify-content: center;
     flex-direction: row;
     text-align: center;
-    color:#cacaca;
-    padding: 1px 6px;
-}
-
-.user2{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
-    color:#cacaca;
-    padding: 1px 6px;
 }
 
 #link{
     margin-right: 10px;
     cursor: pointer;
-    font-family: avenir;
-    color:#cacaca;
+}
+
+.about{
     list-style: none;
     display: flex;
     align-items: center;
@@ -220,13 +255,6 @@ a{
     justify-content: center;
     flex-direction: row;
     text-align: center;
-    padding: 1em;
-    margin: 0em;
-    font-size: 12px;
-    letter-spacing: -.1px;
-    line-height: 1.5;
-    font-family: avenir;
-    color:#cacaca;
 }
 
 .copyright{
@@ -235,14 +263,6 @@ a{
     justify-content: center;
     flex-direction: row;
     text-align: center;
-    padding: 1em;
-    margin: 0em;
-    font-size: 12px;
-    letter-spacing: -.1px;
-    line-height: 1.5px;
-    font-family: avenir;
-    color:#cacaca;
 }
-
 
 
