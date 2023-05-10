@@ -149,7 +149,7 @@ h2{
     grid-auto-flow:column;
     grid-auto-columns: 18%;
 
-    overflow-x:hidden;
+    overflow-x:scroll;
     overscroll-behavior-inline: contain;
 }
 
