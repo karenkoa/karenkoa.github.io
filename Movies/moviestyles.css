@@ -1,13 +1,25 @@
-.header{
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    min-height: 82px;
     background-color: #151722;
-    height: 82px;
     filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.3));
+}
+
+.menu{
+    width: 80%;
     display: flex;
     justify-content: flex-start;
     align-items: initial;
+    margin: 0;
 }
 
-.head-bttn{
+nav button {
     color:#FAF8FC;
     font-family: Montserrat;
     font-weight: bold;
@@ -22,7 +34,7 @@
     flex-direction: row;
 }
 
-.head-bttn:hover{
+nav button:hover{
     text-decoration: underline;
 }
 
@@ -32,49 +44,87 @@
 
 a{
     color:#FFFFFF;
+    text-decoration: none;
 }
 
-.profile{                               /*Contenedor del perfil*/
+.profile{
+    width: 20%;
+    min-width:150px;
+    padding: 0;
+    width: 20%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.accordion{                             /*Botón acordeón del perfil*/
-    cursor: pointer;
-    transition: 0.5s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    margin-left: 10em;
-    color: #FFFFFF;
-    font-family: Montserrat;
-    font-size: 14px;
-    background-color: #151722;
+    flex-direction: row-reverse;
+    margin: 15px 50px;
     
 }
 
-.panel{                                     /*Panel de opciones oculto*/
-    display: none;
-    overflow: hidden;
-    border: none;
+
+ul, li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+   
+}
+
+.profile li a{
+    background-color:#151722;
+    color: #FAF8FC;
+    min-width: 150px;
+    text-decoration: none;
+    padding: 18px 10px;
+    display: block;
+}
+
+.profile li a:hover{
     background-color: #0E0F15;
-    color: #D9D9D9;    
+}
+
+.profile li ul{
+    display: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.profile li:hover > ul{
+    display: block;
+}
+
+.profile button{
+    border: none;
+    background: none;
+    color:#FAF8FC;
+    padding: 0;
     font-family: Montserrat;
-    font-size: 12px;
+    text-align: justify;
+}
+
+
+.accordion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.accordion ul li #pic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
 }
 
 #pic{                                       /*Foto de perfil*/
     margin-left: 10px;
     height: 40px;
     width: 40px;
+    float: right;
 }
 
 .title{                                     /*Nombre de la página*/
     color: #ffffff;
     font-family: Montserrat;
-    font-weight: bold;
+    font-weight: 00;
     padding-left: 3.5rem;
     font-size: 32px;
     display: flex;
@@ -94,6 +144,7 @@ a{
     display: block;
     align-self: center;
     margin-left: 16px;
+    padding-left: 1em;
     cursor: pointer;
 }
 
@@ -111,23 +162,36 @@ body {
     margin: 0em;
 }
 
-.movies{
-    padding: 1.5rem;                                                                                                                                   
-    align-content: center;
+.movies{                                                                                                                                  
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    margin: 0 auto;
+    padding: 50px 50px; 
+    position: relative;
+    z-index: 2;
+}
+
+.movies::after{
+    content: "";
+    width: 285px;
 }
 
 .banner{
     border: none;
-    width: 268px;
+    width: 100%;
+    max-width: 268px;
     height: 158px;
     background: no-repeat center/100% url(img/red.jpg);                         /* Para centrar la imagen           */
     filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.3));
     margin: 10px;
     cursor: pointer;
     border-radius: 9.5px;
+    position: relative;
+    z-index: 1;
 }
 
 #red{
@@ -216,7 +280,7 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 1.5em 5em 1.5em 1.5em;
+    padding: 1.5em;
 }
 
 a{
