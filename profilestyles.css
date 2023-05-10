@@ -11,21 +11,15 @@ body {                                                  /*Estilo general de la p
     background: none;
     border: none;
     display: flex;
-    align-items: center;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #logo{                                                  /*Logotipo.*/
     border: none;
     background: none;
     cursor: pointer;
-}
-
-#edit{                                                  /*Botón EDITAR PERFILES.*/
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin-left: 84em;
 }
 
 .profile{                                                /*Botón EDITAR PERFILES.*/
@@ -45,19 +39,18 @@ body {                                                  /*Estilo general de la p
     box-shadow: 0rem, 0.25rem, 1.5rem, rgba(0,0,0,0.16);
 }
 
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 8em;
+}
+
 h4{                                                     /*Texto "Who's watching?"*/
     font-family: Montserrat;
     font-size: 22px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5rem;
-}
-
-.options{                                               /*Contenedor de los perfiles.*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
 }
 
 .user{                                                  /*Estilo general de los botones de perfil.*/
