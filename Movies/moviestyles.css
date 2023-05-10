@@ -87,7 +87,7 @@ ul, li{
 }
 
 .profile li:hover > ul{
-    display: block;
+    display: none;
 }
 
 .profile button{
@@ -121,6 +121,8 @@ ul, li{
     width: 40px;
     float: right;
 }
+
+/*************************************************************************************************************************************/
 
 .title{                                     /*Nombre de la página*/
     color: #ffffff;

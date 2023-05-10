@@ -20,23 +20,34 @@ h1 {
 }
 /* Estos son los estilos del header nav bar*/
 
-.header{
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    min-height: 82px;
     background-color: #151722;
-    height: 82px;
     filter: drop-shadow(0px 30px 30px rgba(0, 0, 0, 0.3));
+}
+
+.menu{
+    width: 80%;
     display: flex;
     justify-content: flex-start;
     align-items: initial;
+    margin: 0;
 }
 
-.head-bttn{
+nav button {
     color:#FAF8FC;
     font-family: Montserrat;
     font-weight: bold;
     background: none;
     border: none;
     font-size: 12px;
-    /*line-height: 23px;*/
     letter-spacing: 1.42px;
     margin: 15px 30px 15px 30px;
     cursor: pointer;
@@ -45,7 +56,7 @@ h1 {
     flex-direction: row;
 }
 
-.head-bttn:hover{
+nav button:hover{
     text-decoration: underline;
 }
 
@@ -53,99 +64,86 @@ h1 {
     margin-right: 10px;
 }
 
-.profile{                               /*Contenedor del perfil*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+a{
+    color:#FFFFFF;
+    text-decoration: none;
 }
 
-.accordion{                             /*Botón acordeón del perfil*/
-    cursor: pointer;
-    transition: 0.5s;
+.profile{
+    width: 20%;
+    min-width:150px;
+    padding: 0;
+    width: 20%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    margin-left: 10em;
-    color: #FFFFFF;
-    font-family: Montserrat;
-    font-size: 14px;
-    background-color: #151722;
+    flex-direction: row-reverse;
+    margin: 15px 50px;
     
 }
 
-.panel{                                     /*Panel de opciones oculto*/
-    display: none;
-    overflow: hidden;
-    border: none;
+
+ul, li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+   
+}
+
+.profile li a{
+    background-color:#151722;
+    color: #FAF8FC;
+    min-width: 150px;
+    text-decoration: none;
+    padding: 18px 10px;
+    display: block;
+}
+
+.profile li a:hover{
     background-color: #0E0F15;
-    color: #D9D9D9;    
+}
+
+.profile li ul{
+    display: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.profile li:hover > ul{
+    display: none;
+}
+
+.profile button{
+    border: none;
+    background: none;
+    color:#FAF8FC;
+    padding: 0;
     font-family: Montserrat;
-    font-size: 12px;
+    text-align: justify;
+    font-weight: 600;
+}
+
+
+.accordion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.accordion ul li #pic{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 10px;
 }
 
 #pic{                                       /*Foto de perfil*/
     margin-left: 10px;
     height: 40px;
     width: 40px;
+    float: right;
 }
-
-footer{
-    background-color: #151722;
-    color: #FFFFFF;
-    height: 278px;
-    width: auto;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1.5em 5em 1.5em 1.5em;
-}
-
-a{
-    color: #FFFFFF;
-}
-
-.user{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
-}
-
-#link{
-    margin-right: 10px;
-    cursor: pointer;
-}
-
-.about{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
-}
-
-.info{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
-}
-
-.copyright{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    text-align: center;
-}
-
+/**************************************************************************************************************************************/
 
 /* Nota: estos son los estilos del carrusel - slider*/
 
@@ -477,6 +475,11 @@ video {
     justify-content: space-around;
 }
 
+.movies::after{
+    content: "";
+    width: 285px;
+}
+
 .banner {
     border: none;
     width: 268px;
@@ -520,6 +523,9 @@ video {
 }
 #narnia {
     background: no-repeat center/100% url(IMG/narnia.jpg);
+}
+#gravity {
+    background: no-repeat center/100% url(IMG/gravityfalls_disneyplus.jpeg);
 } 
 #encanto {
     background: no-repeat center/100% url(IMG/encanto.jpg);
@@ -566,6 +572,63 @@ video {
     border-radius: 5px;
 }
 
+/********************************************************************************************************************************/
+footer{
+    background-color: #151722;
+    color: #FFFFFF;
+    height: 278px;
+    width: auto;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5em 5em 1.5em 1.5em;
+}
+
+a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.user{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+#link{
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.about{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
 
 
 
